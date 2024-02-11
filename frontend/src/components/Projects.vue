@@ -17,15 +17,21 @@
       </p>
       <li class="project-item"> Historical Timeline </li>
       <p class="project-description">Combining my passion for history and computers this project utilizes <em>Vite and
-          Vue</em>, <em>GoLang</em>, <em>JavaScript</em>, and <em>Postgres</em> to allow a user to search up a historical
-        figure to see many other important figures that were alive at the same time.</p>
+          Vue</em>, <em>GoLang</em>, <em>JavaScript</em>, and <em>sql</em> and <a
+          href="https://github.com/trietmn/go-wiki?tab=readme-ov-file#2-getpage-there-are-multiple-page-methods-in-the-wikipedia-page-methods"><em>go-wiki</em></a>(a
+        Golang Wikipedia API wrapper) to allow users to look up historical figures and discover other figures who
+        were alive at the same time.</p>
       <p class="project-description">
         You can check it out <router-link id="here" to='/Timeline'><strong>Here.</strong></router-link>
       </p>
       <li class="project-item"> Accurate Roman Name Generator </li>
-      <p class="project-description">This is a terminal based application I made using C++ in my
-        spare time while taking CS 121. Based on the day of the week and the liturgical season the program will pray the
-        correct rosary. I made this to implement some of the concepts I had learned so far</p>
+      <p class="project-description">This is a c++ program for generating historically plausible Roman names. With a
+        Praenomen (first name), Gensnomen (clan name), and Cognomen (family name). The program can generate over 2 million
+        names. I hope to expand this project to include Roman names for places like villages, cities, and coutnreis as
+        well as geographic names for continents, regions, and bodies of water.</p>
+      <p class="project-description">
+        You can check it out <a href="https://github.com/nickbar2003/Roman-Name-Generator"><strong>Here</strong></a>
+      </p>
     </ul>
   </div>
 </template>

@@ -10,26 +10,21 @@
             <li class="location">The Coeur d’Alene Gold & Spa Resort | Coeur d’Alene, ID</li>
             <ul class="work-description">
 
-                <li class="work-description-bullet">Insert description Lorem ipsum dolor
-                    consequuntur quo rep</li>
-                <li class="work-description-bullet">Insert description Lorem ipsum dolor
-                    consequuntur quo rep</li>
-                <li class="work-description-bullet">Insert description Lorem ipsum dolor
-                    consequuntur quo rep</li>
+                <li class="work-description-bullet">Landscaping: mowing, trimming, edging.</li>
+                <li class="work-description-bullet">Pool matinence: chemical testing, balance, cleaning.</li>
+                <li class="work-description-bullet">Floral care: pruing, fertilizing, planting</li>
             </ul>
 
             <li class="work-item"><strong>Student and team member</strong> <span class="date">Summer 2022</span></li>
             <li class="location">Rennes Two University | Rennes, France</li>
             <ul class="work-description">
-                <li class="work-description-bullet">Excavation of an archaeological site including early iron age artifacts
-                    as well cleaning, and analysis
-                    of artifacts both Greek and Italian</li>
-                <li class="work-description-bullet">Insert description Lorem ipsum dolor
-                    consequuntur quo rep</li>
-                <li class="work-description-bullet">Insert description Lorem ipsum dolor
-                    consequuntur quo rep</li>
-                <li class="work-description-bullet">Insert description Lorem ipsum dolor
-                    consequuntur quo rep</li>
+                <li class="work-description-bullet">I had first hand experience doing the science of archaeology on an Early
+                    Iron Age
+                    Italian Site called <em>Incoranata</em></li>
+
+                <li class="work-description-bullet">Excavation and recovery of Italian and Greek artifacts</li>
+                <li class="work-description-bullet">Cleaning and idenfitfaction of artifacts</li>
+                <li class="work-description-bullet">Stratigraphical documentation and analysis</li>
             </ul>
         </ul>
 
