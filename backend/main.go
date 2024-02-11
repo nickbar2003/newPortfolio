@@ -39,11 +39,7 @@ var figureDB *sql.DB
 
 func main() {
 
-	// Serve static files from the "frontend/dist" directory
 	http.Handle("/", http.FileServer(http.Dir("./frontend/dist")))
-
-	// Start the server
-	http.ListenAndServe(":10000", nil)
 
 	// connStr := "root:mauFJcuf5dhRMQrjj@/quotes"
 	// connStr := "sql3680854:ugjnPiwSB7@tcp(sql3.freesqldatabase.com:3306)/sql3680854"
