@@ -1,0 +1,3 @@
+buildCommand: cd backend && go build -o main
+startCommand: ./backend/main
+

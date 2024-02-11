@@ -63,7 +63,7 @@ func main() {
 	e.GET("/hello", Greetings)
 	e.GET("/fetchBio", fetchBio)
 	e.GET("/fetchImage", fetchImage)
-	e.Logger.Fatal(e.Start(":3000"))
+	e.Logger.Fatal(e.Start(":10000"))
 
 }
 
