@@ -53,6 +53,7 @@ func main() {
 
 	e := echo.New()
 	e.Use(middleware.CORS())
+	e.Static("/", "prod")
 	e.GET("/fetchFigures", fetchFigures)
 	e.GET("/hello", Greetings)
 	e.GET("/fetchBio", fetchBio)
