@@ -39,10 +39,6 @@ var figureDB *sql.DB
 
 func main() {
 
-	http.Handle("/", http.FileServer(http.Dir("./frontend/dist")))
-
-	// connStr := "root:mauFJcuf5dhRMQrjj@/quotes"
-	// connStr := "sql3680854:ugjnPiwSB7@tcp(sql3.freesqldatabase.com:3306)/sql3680854"
 	connStr := "freedb_sql3680854:5tSKgASdNR2&5eV@tcp(sql.freedb.tech:3306)/freedb_sql3680854"
 
 	db, err := sql.Open("mysql", connStr)
@@ -54,11 +50,6 @@ func main() {
 	figureDB.SetConnMaxLifetime(time.Minute * 3)
 	figureDB.SetMaxOpenConns(10)
 	figureDB.SetMaxIdleConns(10)
-
-	// rows, err := db.Query("SELECT * FROM figure")
-	// if err != nil {
-	// 	log.Fatal(err)
-	// }
 
 	e := echo.New()
 	e.Use(middleware.CORS())
