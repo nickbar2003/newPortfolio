@@ -8,7 +8,7 @@
       <li class="major-name">Bachelor of Arts, History</li>
       <li class="major-name">Minor in Classical Civilizations</li>
     </ul>
-    <div id="gpa"> Cumulative GPA: 3.94 | President’s list: All Semesters</div>
+    <div id="gpa"> Cumulative GPA: 3.94 | President’s list: Four Semesters</div>
     <div class="courses">
       <h2 id="subheader"> Courses</h2>
       <ul id="courses-list">
@@ -32,10 +32,21 @@
             <li class="subbullet-description"> Continue program design and implementation</li>
             <li class="subbullet-description"> Algorithm efficiency analysis</li>
             <li class="subbullet-description"> Git and Github for software version control</li>
+          </ul>
+        </ul>
 
+        <li class="course-name"> CPSC 121 </li>
+        <ul class="course-description">
+          <li class="course-description-bullet"> Introduction to Computer Science with C++</li>
+          <ul class="course-description-subbullet">
+            <li class="subbullet-description"> Algorithm design</li>
+            <li class="subbullet-description"> Program design and implementation</li>
+            <li class="subbullet-description"> Git and GitHub</li>
+            <li class="subbullet-description"> Data structure design and implementation</li>
           </ul>
 
         </ul>
+
       </ul>
     </div>
   </div>

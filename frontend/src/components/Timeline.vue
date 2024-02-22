@@ -13,7 +13,7 @@ export default {
     methods: {
         // Full Transparency the I figured out how to reformat the sql Date yyyy-mmmm-dddd into Mon dd, yyyy by asking ChatGPT
         async fetchSum(bioName) {
-            const bioResp = await fetch(`http://localhost:10000/fetchBio?name=${bioName}`)
+            const bioResp = await fetch(`https://newportfolio-mdwh.onrender.com:10000/fetchBio?name=${bioName}`)
             console.log("clicking the fetch button");
             const ret = await bioResp.json();
 
