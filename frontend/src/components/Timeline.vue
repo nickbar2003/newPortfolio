@@ -51,7 +51,7 @@ export default {
             // var emptyDiv = document.createElement("div");
             // document.getElementById("figure-image").appendChild(emptyDiv);
 
-            const resp = await fetch(`http://localhost:10000/fetchFigures?name=${this.figureName}`)
+            const resp = await fetch(`https://newportfolio-mdwh.onrender.com:10000/fetchFigures?name=${this.figureName}`)
             console.log("clicking the fetch button");
             const ret = await resp.json();
 
