@@ -55,6 +55,7 @@
     padding-top: 1em;
     padding-left: 1em;
     padding-right: 1em;
+    padding-bottom: 1em;
     display: flex;
     justify-content: space-between;
 }
@@ -62,7 +63,7 @@
 .work-description {
     padding: .5em;
     padding-left: 5em;
-    font-size: 12pt;
+    font-size: 15pt;
     max-width: 60%;
 }
 

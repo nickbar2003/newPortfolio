@@ -12,24 +12,15 @@ export default {
 
     methods: {
         // Full Transparency the I figured out how to reformat the sql Date yyyy-mmmm-dddd into Mon dd, yyyy by asking ChatGPT
-        // async fetchImage(bioName) {
-        //     console.log("clicking the bio button for " + bioName);
-        //     const resp = await fetch(`http://localhost:3000/fetchImage?name=${bioName}`)
-        //     const ret = await resp.json();
-
-        //     this.figureImage = ret;
-
-        // },
         async fetchSum(bioName) {
-            console.log("clicking the bio button for " + bioName);
-            const bioResp = await fetch(`http://localhost:3000/fetchBio?name=${bioName}`)
+            const bioResp = await fetch(`http://localhost:10000/fetchBio?name=${bioName}`)
             console.log("clicking the fetch button");
             const ret = await bioResp.json();
 
             this.figureSum = ret;
 
             console.log("fethcing image for " + bioName);
-            const imageResp = await fetch(`http://localhost:3000/fetchImage?name=${bioName}`)
+            const imageResp = await fetch(`http://localhost:10000/fetchImage?name=${bioName}`)
             console.log(imageResp);
             const imageRet = await imageResp.json();
 
@@ -39,21 +30,28 @@ export default {
             var tempTempElement = document.createElement('div');
             tempTempElement.innerHTML = tempElement.getElementsByClassName("infobox-image")[0].innerHTML;
 
-            document.getElementById("figure-image").removeChild;
+
+
+            document.getElementById("figure-image").appendChild(tempTempElement);
+            document.getElementById("figure-image").removeChild
+                (
+                    document.getElementById("figure-image").firstElementChild
+                );
             document.getElementById("figure-image").appendChild(tempTempElement);
 
 
 
 
 
-            // this.figureImage = imageRet;
 
         },
 
         async fetchFigures() {
             document.getElementById("loading").hidden = false;
+            // var emptyDiv = document.createElement("div");
+            // document.getElementById("figure-image").appendChild(emptyDiv);
 
-            const resp = await fetch(`http://localhost:3000/fetchFigures?name=${this.figureName}`)
+            const resp = await fetch(`http://localhost:10000/fetchFigures?name=${this.figureName}`)
             console.log("clicking the fetch button");
             const ret = await resp.json();
 
@@ -101,9 +99,11 @@ export default {
 <template id="top">
     <div class="page-wrapper">
         <h1 id="timeline-title">Timeline of Historical Figures</h1>
-        <p id="timeline-description">Welcome to my timeline of historical figures. Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Dignissimos totam modi reprehenderit ipsam nihil quia labore voluptatibus, porro fugiat quis
-            dolore repudiandae rerum nesciunt pariatur consequuntur explicabo dolorem maiores laborum?</p>
+        <p class="timeline-description">Welcome to my timeline of historical figures!
+        </p>
+        <p class="timeline-description">You will be met with a list of figures who lived at the same time. Some results can
+            be suprising.</p>
+        <p class="timeline-description">Try "Queen Victoria", "George Washington", "Napoleon Bonaparte"</p>
 
         <div id="search-bar">
             <input type="text" id="search-input" v-model="figureName">
@@ -238,7 +238,7 @@ template {
 
 
 
-#timeline-description {
+.timeline-description {
     font-size: 12pt;
     max-width: 60%;
 }

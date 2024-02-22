@@ -4,8 +4,10 @@ import (
 	"database/sql"
 	"log"
 	"net/http"
+	"os"
 	"time"
 
+	"github.com/joho/godotenv"
 	"github.com/labstack/echo"
 	"github.com/labstack/echo/middleware"
 	gowiki "github.com/trietmn/go-wiki"
@@ -39,7 +41,12 @@ var figureDB *sql.DB
 
 func main() {
 
-	connStr := "freedb_sql3680854:5tSKgASdNR2&5eV@tcp(sql.freedb.tech:3306)/freedb_sql3680854"
+	err := godotenv.Load(".env")
+	if err != nil {
+		log.Fatal("Error loading .env file")
+	}
+
+	connStr := os.Getenv("DB_URL")
 
 	db, err := sql.Open("mysql", connStr)
 	if err != nil {

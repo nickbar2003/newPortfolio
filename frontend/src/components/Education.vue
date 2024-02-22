@@ -23,7 +23,7 @@
           </ul>
           <li class="course-description-bullet"> object-oriented programming with Java </li>
         </ul>
-        <li class="course-name"> CS 122 </li>
+        <li class="course-name"> CS 322 </li>
         <ul class="course-description">
           <li class="course-description-bullet"> Continuation of Programming with C++ </li>
           <li class="course-description-bullet"> Learned more concepts of software development </li>

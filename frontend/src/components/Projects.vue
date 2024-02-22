@@ -6,18 +6,17 @@
     <h2 id="header"> Projects </h2>
     <ul id="project-list">
       <li class="project-item"> Portfolio Website </li>
-      <p class="project-description"> This webpage stores information about my past and present projects, my education
-        information,
-        current and past classes, as well as my work and study expriences.</p>
+      <p class="project-description"> This Web page stores information about my past and present projects, my education
+        information, current and past classes, as well as my work and study experiences.</p>
       <li class="project-item"> C++ Checkers</li>
       <p class="project-description">Utilizing C++ and the RayLib graphics library I programed a version of the popular
         game checkers.</p>
       <p class="project-description">
         You can check it out <a href="https://github.com/nickbar2003/C-Checkers"><strong>Here</strong></a>
       </p>
-      <li class="project-item"> Historical Timeline </li>
+      <li class="project-item"> Historical Figure Search </li>
       <p class="project-description">Combining my passion for history and computers this project utilizes <em>Vite and
-          Vue</em>, <em>GoLang</em>, <em>JavaScript</em>, and <em>sql</em> and <a
+          Vue</em>, <em>Golang</em>, <em>JavaScript</em>, and <em>SQL</em> and <a
           href="https://github.com/trietmn/go-wiki?tab=readme-ov-file#2-getpage-there-are-multiple-page-methods-in-the-wikipedia-page-methods"><em>go-wiki</em></a>(a
         Golang Wikipedia API wrapper) to allow users to look up historical figures and discover other figures who
         were alive at the same time.</p>
@@ -42,6 +41,7 @@
   margin-top: 10em;
   display: flex;
   flex-direction: column;
+  /* align-items: center; */
   border-top: .5em solid whitesmoke;
 }
 
@@ -66,6 +66,9 @@
 
 #project-list {
   list-style: none;
+  /* align-items: center; */
+  display: flex;
+  flex-direction: column;
 }
 
 .project-item {
@@ -75,7 +78,7 @@
 
 .project-description {
   padding-left: 5em;
-  font-size: 12pt;
+  font-size: 15pt;
   max-width: 60%;
 }
 </style>

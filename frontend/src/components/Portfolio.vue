@@ -14,3 +14,13 @@ import Work from './Work.vue'
         <Work />
     </div>
 </template>
+
+<style scoped>
+#appwrapper {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+
+}
+</style>
