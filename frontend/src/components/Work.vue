@@ -16,7 +16,7 @@
             </ul>
 
             <li class="work-item"><strong>Student and team member</strong> <span class="date">Summer 2022</span></li>
-            <li class="location">Rennes Two University | Rennes, France</li>
+            <li class="location">Rennes Two University | Incoronata, Italy</li>
             <ul class="work-description">
                 <li class="work-description-bullet">I had first hand experience doing the science of archaeology on an Early
                     Iron Age

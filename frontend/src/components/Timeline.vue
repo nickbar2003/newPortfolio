@@ -119,12 +119,15 @@ export default {
         </p>
 
         <ul v-if="figuresList.length" id="figures">
-            <p v-if="figureSum" id="figureSum">
+            <p v-if="figureSum">
                 <!-- <button @click="fetchImage(figure.name)">See Image</button> -->
             <div id="figure-image">
                 <!--<img v-bind:src="figureImage" alt="figureImage" id="figure-image"> -->
             </div>
-            {{ figureSum }}
+            <p id="figureSum">
+
+                {{ figureSum }}
+            </p>
             </p>
 
 
@@ -198,6 +201,14 @@ template {
 
 .figure-name {
     font-size: 20pt;
+
+}
+
+#figureSum {
+    border-left: .1em solid whitesmoke;
+    border-right: .1em solid whitesmoke;
+    border-top: .1em solid whitesmoke;
+    padding: .5em;
 
 }
 
