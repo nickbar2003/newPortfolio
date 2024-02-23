@@ -140,7 +140,7 @@ export default {
                     <p>
                         Died: {{ figure.deathdate }}
                     </p>
-                    <a href="#top" @click="fetchSum(figure.name)">Bio</a>
+                    <a href="#figureSum" @click="fetchSum(figure.name)">Bio</a>
 
                 </div>
 
@@ -204,6 +204,14 @@ template {
 #figure-image {
     max-width: 25%;
     max-height: 25%;
+    border: .1em solid whitesmoke;
+    margin-bottom: 1em;
+    padding-top: 1em;
+    padding-left: 1em;
+    color: whitesmoke;
+    font-size: 0em;
+
+
 }
 
 #timeline-title {
