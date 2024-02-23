@@ -13,14 +13,15 @@ export default {
     methods: {
         // Full Transparency the I figured out how to reformat the sql Date yyyy-mmmm-dddd into Mon dd, yyyy by asking ChatGPT
         async fetchSum(bioName) {
-            const bioResp = await fetch(`https://newportfolio-mdwh.onrender.com:10000/fetchBio?name=${bioName}`)
+            const bioResp = await fetch(`https://newportfolio-mdwh.onrender.com/fetchBio?name=${bioName}`)
             console.log("clicking the fetch button");
             const ret = await bioResp.json();
 
             this.figureSum = ret;
 
             console.log("fethcing image for " + bioName);
-            const imageResp = await fetch(`http://localhost:10000/fetchImage?name=${bioName}`)
+            // const imageResp = await fetch(`http://localhost:10000/fetchImage?name=${bioName}`)
+            const imageResp = await fetch(`https://newportfolio-mdwh.onrender.com/fetchImage?name=${bioName}`)
             console.log(imageResp);
             const imageRet = await imageResp.json();
 
@@ -51,7 +52,7 @@ export default {
             // var emptyDiv = document.createElement("div");
             // document.getElementById("figure-image").appendChild(emptyDiv);
 
-            const resp = await fetch(`https://newportfolio-mdwh.onrender.com:10000/fetchFigures?name=${this.figureName}`)
+            const resp = await fetch(`https://newportfolio-mdwh.onrender.com/fetchFigures?name=${this.figureName}`)
             console.log("clicking the fetch button");
             const ret = await resp.json();
 
