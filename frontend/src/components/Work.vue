@@ -34,7 +34,7 @@
 
 <style scoped>
 #work {
-    margin-top: 10em;
+    margin-top: 3em;
     display: flex;
     flex-direction: column;
     border-top: .5em solid whitesmoke;
@@ -73,7 +73,7 @@
 
 .location {
     padding-left: 1.5em;
-    font-size: 15pt;
+    font-size: 20pt;
 
 }
 

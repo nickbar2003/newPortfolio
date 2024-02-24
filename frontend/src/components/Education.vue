@@ -175,7 +175,9 @@
 }
 
 .course-name {
+  max-width: 50%;
   padding: .5em;
+
   font-size: 25pt;
   list-style: none;
 }

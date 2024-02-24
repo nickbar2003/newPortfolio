@@ -10,6 +10,7 @@ import (
 	"github.com/joho/godotenv"
 	"github.com/labstack/echo"
 	"github.com/labstack/echo/middleware"
+	_ "github.com/lib/pq"
 	gowiki "github.com/trietmn/go-wiki"
 
 	_ "github.com/go-sql-driver/mysql"
@@ -48,7 +49,7 @@ func main() {
 
 	connStr := os.Getenv("DB_URL")
 
-	db, err := sql.Open("mysql", connStr)
+	db, err := sql.Open("postgres", connStr)
 	if err != nil {
 		log.Fatal(err)
 	}
