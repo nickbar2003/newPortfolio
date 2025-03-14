@@ -4,7 +4,6 @@ import (
 	"database/sql"
 	"log"
 	"net/http"
-	"os"
 	"time"
 
 	"github.com/joho/godotenv"
@@ -47,13 +46,16 @@ func main() {
 		log.Fatal("Error loading .env file")
 	}
 
-	connStr := os.Getenv("DB_URL")
+	// connStr := os.Getenv("DB_URL")
+	connStr := "user=postgres.fhrjijfswpczwumvtnau password=lNRo7Y1l4greaszZ host=aws-0-us-west-1.pooler.supabase.com port=5432 dbname=postgres sslmode=require"
 
 	db, err := sql.Open("postgres", connStr)
 	if err != nil {
 		log.Fatal(err)
 	}
+
 	figureDB = db
+	log.Println("Connected to the database")
 
 	figureDB.SetConnMaxLifetime(time.Minute * 3)
 	figureDB.SetMaxOpenConns(10)
@@ -79,12 +81,13 @@ func Greetings(c echo.Context) error {
 // This function adapts code for querying from the GO website
 // See Here: https://go.dev/doc/database/querying
 func fetchFigures(c echo.Context) error {
-	log.Println("made it to function")
 	name := c.QueryParam("name")
 
 	// query :=
 	var searchFigure Figure
 	// var figure sql.row
+	log.Println("made it to function")
+	log.Println(name)
 	err := figureDB.QueryRow("SELECT * FROM figure WHERE name = ?", name).Scan(&searchFigure.Id, &searchFigure.Name, &searchFigure.Birthdate, &searchFigure.Deathdate)
 	if err != nil {
 		if err == sql.ErrNoRows {
@@ -95,6 +98,7 @@ func fetchFigures(c echo.Context) error {
 		return c.JSON(http.StatusNotFound, map[string]string{"error": "Encounterd error in query"})
 	}
 
+	log.Println("made past first query")
 	birth := searchFigure.Birthdate
 	death := searchFigure.Deathdate
 

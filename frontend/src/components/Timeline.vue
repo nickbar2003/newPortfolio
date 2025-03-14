@@ -13,15 +13,16 @@ export default {
     methods: {
         // Full Transparency the I figured out how to reformat the sql Date yyyy-mmmm-dddd into Mon dd, yyyy by asking ChatGPT
         async fetchSum(bioName) {
-            const bioResp = await fetch(`https://newportfolio-mdwh.onrender.com/fetchBio?name=${bioName}`)
+            // const bioResp = await fetch(`https://newportfolio-mdwh.onrender.com/fetchBio?name=${bioName}`)
+            const bioResp = await fetch(`http:localhost:10000/fetchBio?name=${bioName}`)
             console.log("clicking the fetch button");
             const ret = await bioResp.json();
 
             this.figureSum = ret;
 
             console.log("fethcing image for " + bioName);
-            // const imageResp = await fetch(`http://localhost:10000/fetchImage?name=${bioName}`)
-            const imageResp = await fetch(`https://newportfolio-mdwh.onrender.com/fetchImage?name=${bioName}`)
+             const imageResp = await fetch(`http://localhost:10000/fetchImage?name=${bioName}`)
+            //const imageResp = await fetch(`https://newportfolio-mdwh.onrender.com/fetchImage?name=${bioName}`)
             console.log(imageResp);
             const imageRet = await imageResp.json();
 
@@ -52,8 +53,9 @@ export default {
             // var emptyDiv = document.createElement("div");
             // document.getElementById("figure-image").appendChild(emptyDiv);
 
-            const resp = await fetch(`https://newportfolio-mdwh.onrender.com/fetchFigures?name=${this.figureName}`)
-            console.log("clicking the fetch button");
+            const resp = await fetch(`http://localhost:10000/fetchFigures?name=${this.figureName}`)
+            // const resp = await fetch(`https://newportfolio-mdwh.onrender.com/fetchFigures?name=${this.figureName}`)
+            console.log("clicking the fetch button with " + this.figureName);
             const ret = await resp.json();
 
             const dateFormat = {
@@ -77,14 +79,6 @@ export default {
                 entry.deathdate = formattedDeath;
 
 
-                // const figure = document.createElement("li");
-                // figure.innerHTML = `<p>${entry.name}<br>Birth-Death: ${formattedBirth} - ${formattedDeath} <button @click="fetchBio" v-model="${entry.name}">Bio</button> </p>`
-                // // const bio = document.createElement("button");
-                // // bio.setAttribute("v-model", entry.name);
-                // // bio.addEventListener('click', fetchBio);
-                // // bio.innerHTML = "Bio"
-                // // figure.appendChild(bio);
-                // document.getElementById("figures").appendChild(figure);
 
             });
 
@@ -120,9 +114,7 @@ export default {
 
         <ul v-if="figuresList.length" id="figures">
             <p v-if="figureSum">
-                <!-- <button @click="fetchImage(figure.name)">See Image</button> -->
             <div id="figure-image">
-                <!--<img v-bind:src="figureImage" alt="figureImage" id="figure-image"> -->
             </div>
             <p id="figureSum">
 
