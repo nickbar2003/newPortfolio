@@ -19,7 +19,7 @@
           Vue</em>, <em>Golang</em>, <em>JavaScript</em>, and <em>SQL</em> and <a
           href="https://github.com/trietmn/go-wiki?tab=readme-ov-file#2-getpage-there-are-multiple-page-methods-in-the-wikipedia-page-methods"><em>go-wiki</em></a>(a
         Golang Wikipedia API wrapper) to allow users to look up historical figures and discover other figures who
-        were alive at the same time.</p>
+        were alive at the same time. <strong>Currently Disabled</strong></p>
       <p class="project-description">
         You can check it out <router-link id="here" to='/Timeline'><strong>Here.</strong></router-link>
       </p>

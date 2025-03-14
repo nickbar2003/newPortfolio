@@ -94,7 +94,7 @@ export default {
 <template id="top">
     <div class="page-wrapper">
         <h1 id="timeline-title">Timeline of Historical Figures</h1>
-        <p class="timeline-description">Welcome to my timeline of historical figures!
+        <p class="timeline-description">Welcome to my timeline of historical figures! <strong>Currently Disabled!</strong>
         </p>
         <p class="timeline-description">You will be met with a list of figures who lived at the same time. Some results can
             be suprising.</p>
