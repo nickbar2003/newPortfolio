@@ -101,9 +101,7 @@ export default {
 <template id="top">
     <div class="page-wrapper">
         <h1 id="timeline-title">Timeline of Historical Figures</h1>
-        <p id="timeline-description">Welcome to my timeline of historical figures. Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Dignissimos totam modi reprehenderit ipsam nihil quia labore voluptatibus, porro fugiat quis
-            dolore repudiandae rerum nesciunt pariatur consequuntur explicabo dolorem maiores laborum?</p>
+        <p id="timeline-description">Welcome to my timeline of historical figures. <b>This feature is currently disabled.</b></p>
 
         <div id="search-bar">
             <input type="text" id="search-input" v-model="figureName">

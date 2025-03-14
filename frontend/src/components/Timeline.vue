@@ -241,6 +241,7 @@ template {
     margin-left: .5em;
     background-color: whitesmoke;
     border: none;
+    visibility: hidden;
 
 }
 
